@@ -23,4 +23,4 @@ The bootstrap command takes the testing file path, the number of samples to take
 
 
 ## Note
-The file data/splitDataIntoSubsets.py is simply a utility I wrote to split the single data set I had been given into three sets (for training, tuning, and testing, respectively). All the program does is split a .csv file into an arbitrary number of equal (or as close as possible to equal) partitions. I never used data/OnlyOneSimplifiedVersion.csv except to generate those partitions of it; it is included here only for completeness.
+Data files have been removed to avoid publicly sharing data provided by others.
