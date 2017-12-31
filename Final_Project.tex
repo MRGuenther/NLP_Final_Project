@@ -54,7 +54,7 @@ The s\_split module acts as a wrapper for ParseTree enabling training and testin
 
 \subsection*{Tuning}
 
-The baseline set by a previous attempt was described only in vague terms. It was approximately 70\% by some metric, but further details as to the specific value or the performance metric used were unavailable. Therefore, the testing procedure was designed to output both accuracy and F1 score; precision and recall were included as well in order to aid in tuning the balance of errors between false postives and false negatives.
+The baseline set by a previous attempt was described only in vague terms. It was approximately 70\% by some metric, but further details as to the specific value or the performance metric used were unavailable. Therefore, the testing procedure was designed to output both accuracy and F$_1$ score; precision and recall were included as well in order to aid in tuning the balance of errors between false postives and false negatives.
 
 Various learning rates and training periods were used for tuning against the development partition, and it was determined that a learning rate of 1.0 and a training period of 100 epochs were optimal. Models were then trained with split-probability thresholds ranging from 0.1 to 0.9 in increments of 0.1. They were tested on the development partition of the data set, yielding the results shown in Table \ref{tbl:devProbStats}.
 
@@ -130,7 +130,7 @@ Threshold & Accuracy & Precision & Recall & F$_1$ Score \\
 
 \subsection*{Statistical Significance}
 
-Although the model performed slightly worse on the testing partition than on the development partition, it still outperformed the baseline of 70\% in all statistics. In order to determine statistical significance, it was tested again using bootstrap resampling with 10000 samples. Remarkably, each of the four statistics from Table \ref{tbl:testVotingStats} showed a $p$-value of exactly 0.0 that the results had beaten the baseline by chance. This is to say that in none of the 10000 samples did it fall at or below 70\% accuracy, precision, recall, or F1 score.
+Although the model performed slightly worse on the testing partition than on the development partition, it still outperformed the baseline of 70\% in all statistics. In order to determine statistical significance, it was tested again using bootstrap resampling with 10000 samples. Remarkably, each of the four statistics from Table \ref{tbl:testVotingStats} showed a $p$-value of exactly 0.0 that the results had beaten the baseline by chance. This is to say that in none of the 10000 samples did it fall at or below 70\% accuracy, precision, recall, or F$_1$ score.
 
 As a sanity check, the bootstrap resampling procedure was performed again with a baseline of 90\% to confirm that the procedure worked as intended. As one would expect from a properly functioning test, the results showed $p$-values of 1.0 for all statistics. This result confirmed that the procedure did not produce zeros due to a flaw in the program. Still, as one final check, the resampling was performed one last time with a baseline of 0.71313, just barely below the accuracy from Table \ref{tbl:testVotingStats}. This time, accuracy gave a $p$-value of 0.4329---not statistically significant, as one would expect---precision gave 0.0369, and the other values both gave zeros. This is all as one would expect from a working resampling procedure.
 
