@@ -30,3 +30,5 @@ The `bootstrap` command takes the testing file path, the number of samples to ta
 The script `splitDataIntoSubsets.py` is simply a utility I wrote to split the single data set I'd been given into three sets (for training, tuning, and testing, respectively). All the program does is split a `.csv` file into an arbitrary number of equal (or as close as possible to equal) partitions.
 
 The `data/` folder and all files contained therein have been removed to avoid publicly sharing data provided to me by someone else.
+
+[`Final_Project.pdf`](Final_Project.pdf) contains much more detailed descriptions of the problem and the code; this file is merely documentation on usage.
